@@ -1,0 +1,43 @@
+{
+  "single": {
+    "type": "single",
+    "name": "Single Card",
+    "name_zh": "单张牌",
+    "description": "A single card for immediate guidance and clarity.",
+    "card_count": 1,
+    "positions": [
+      {"id": "center", "label": "The Card", "description": "Your current energy and the guidance most relevant to you right now.", "grid_area": "center"}
+    ]
+  },
+  "three-card": {
+    "type": "three-card",
+    "name": "Past / Present / Future",
+    "name_zh": "时间之箭",
+    "description": "Three cards illuminating the arc of time: where you have been, where you stand, and where you are heading.",
+    "card_count": 3,
+    "positions": [
+      {"id": "past", "label": "Past", "description": "The energies and events that have shaped your current situation.", "grid_area": "left"},
+      {"id": "present", "label": "Present", "description": "The heart of your current situation and the forces at play right now.", "grid_area": "center"},
+      {"id": "future", "label": "Future", "description": "The emerging patterns and potential outcomes based on your current trajectory.", "grid_area": "right"}
+    ]
+  },
+  "celtic-cross": {
+    "type": "celtic-cross",
+    "name": "Celtic Cross",
+    "name_zh": "凯尔特十字",
+    "description": "The complete Celtic Cross spread — ten cards mapping the full landscape of your situation.",
+    "card_count": 10,
+    "positions": [
+      {"id": "present", "label": "Present", "description": "The heart of the matter — what covers you right now.", "grid_area": "c1"},
+      {"id": "challenge", "label": "Challenge", "description": "What crosses you — the immediate obstacle or opposing force.", "grid_area": "c2"},
+      {"id": "past", "label": "Past", "description": "The foundation — distant past influences that shaped the present.", "grid_area": "c3"},
+      {"id": "future", "label": "Future", "description": "The crowning influence — what is coming into being.", "grid_area": "c4"},
+      {"id": "above", "label": "Above", "description": "Your conscious goal or best possible outcome.", "grid_area": "c5"},
+      {"id": "below", "label": "Below", "description": "The subconscious foundation — what lies beneath.", "grid_area": "c6"},
+      {"id": "advice", "label": "Advice", "description": "The recommended approach or attitude.", "grid_area": "c7"},
+      {"id": "external", "label": "External", "description": "External influences — people, events, environment.", "grid_area": "c8"},
+      {"id": "hopes", "label": "Hopes & Fears", "description": "Your inner hopes or fears about the outcome.", "grid_area": "c9"},
+      {"id": "outcome", "label": "Outcome", "description": "The final outcome — where this path leads.", "grid_area": "c10"}
+    ]
+  }
+}

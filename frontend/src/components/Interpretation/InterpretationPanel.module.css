@@ -1,0 +1,258 @@
+.panel {
+  width: 100%;
+  max-width: 780px;
+  margin: var(--space-2xl) auto;
+  padding: var(--space-xl);
+}
+
+.panelHeader {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.panelTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+
+.panelSeed {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+  opacity: 0.7;
+}
+
+/* ── Tone Toggle ── */
+
+.toneToggle {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.toneBtn {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  transition: all 0.3s var(--ease-out-expo);
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: transparent;
+}
+
+.toneBtn:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  color: var(--gold-light);
+}
+
+.toneBtnActive {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+  color: var(--gold-light);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
+}
+
+/* ── Overview ── */
+
+.overview {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  border-left: 2px solid rgba(201, 168, 76, 0.3);
+  font-style: italic;
+}
+
+/* ── Three Dimensions ── */
+
+.dimensions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.dimension {
+  background: linear-gradient(135deg, rgba(26, 20, 22, 0.7) 0%, rgba(35, 26, 29, 0.5) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(201, 168, 76, 0.08), 0 4px 30px rgba(0, 0, 0, 0.4);
+  padding: var(--space-lg);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out-expo);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+}
+
+.dimension:hover {
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+.dimHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.dimIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.dimTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
+}
+
+.dimLabel {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.dimNarrative {
+  margin-top: var(--space-md);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+/* ── Synthesis ── */
+
+.synthesis {
+  text-align: center;
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.synthesis::before,
+.synthesis::after {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+
+.synthesis::before { top: 0; }
+.synthesis::after { bottom: 0; }
+
+.synthesisText {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--gold-light);
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+}
+
+/* ── Card Notes ── */
+
+.cardNotes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cardNote {
+  padding: var(--space-lg);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 12px;
+  background: rgba(26, 20, 22, 0.3);
+}
+
+.cardNoteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-sm);
+}
+
+.cardNoteName {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold-light);
+}
+
+.cardNotePosition {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cardNoteMeaning {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.cardNoteSymbol {
+  font-size: 0.8rem;
+  color: var(--gold);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* ── Loading ── */
+
+.loading {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(201, 168, 76, 0.2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--space-md);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loadingText {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 640px) {
+  .panel {
+    padding: var(--space-md);
+    margin: var(--space-lg) auto;
+  }
+  .toneToggle {
+    flex-direction: column;
+  }
+  .panelTitle {
+    font-size: 1.5rem;
+  }
+  .synthesisText {
+    font-size: 1.15rem;
+  }
+}
