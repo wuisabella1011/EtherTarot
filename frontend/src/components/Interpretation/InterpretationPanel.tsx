@@ -28,9 +28,9 @@ export default function InterpretationPanel({ report, cardNotes, seed, onToneCha
     >
       {/* Header */}
       <div className={styles.panelHeader}>
-        <h2 className={styles.panelTitle}>Your Reading</h2>
-        <div className={styles.panelSeed}>
-          🔐 Seed: {seed.slice(0, 16)}... • SystemRandom • Verifiable
+        <h2 className={styles.panelTitle}>你的解读 · Your Reading</h2>
+        <div className={styles.panelSeed} style={{ direction: 'rtl', textAlign: 'center' }}>
+          🔐 Seed: {seed.slice(0, 16)}...<span style={{ direction: 'ltr' }}></span>
         </div>
       </div>
 
@@ -40,13 +40,13 @@ export default function InterpretationPanel({ report, cardNotes, seed, onToneCha
           className={`${styles.toneBtn} ${tone === 'philosophical' ? styles.toneBtnActive : ''}`}
           onClick={() => handleToneChange('philosophical')}
         >
-          🔮 Philosophical
+          🔮 哲思解读 / Philosophical
         </button>
         <button
           className={`${styles.toneBtn} ${tone === 'psychological' ? styles.toneBtnActive : ''}`}
           onClick={() => handleToneChange('psychological')}
         >
-          🧠 Psychological
+          🧠 心理分析 / Psychological
         </button>
       </div>
 
@@ -66,9 +66,9 @@ export default function InterpretationPanel({ report, cardNotes, seed, onToneCha
           const dim = report.three_dimensions[key];
           const icons = { situation: '🌅', dynamics: '⚡', transcendence: '🕊️' };
           const labels = {
-            situation: 'The Landscape',
-            dynamics: 'The Forces',
-            transcendence: 'The Path',
+            situation: '情境层 · The Landscape',
+            dynamics: '动力层 · The Forces',
+            transcendence: '超越层 · The Path',
           };
           const isExpanded = expandedDim === key;
 
@@ -131,7 +131,7 @@ export default function InterpretationPanel({ report, cardNotes, seed, onToneCha
             textTransform: 'uppercase',
           }}
         >
-          Card-by-Card Notes
+          逐牌解读 · Card-by-Card Notes
         </h3>
         {cardNotes.map((note, i) => (
           <motion.div
@@ -151,7 +151,7 @@ export default function InterpretationPanel({ report, cardNotes, seed, onToneCha
               <span className={styles.cardNotePosition}>{note.position}</span>
             </div>
             <p className={styles.cardNoteMeaning}>{note.positional_meaning}</p>
-            <p className={styles.cardNoteSymbol}>Key symbol: {note.key_symbol}</p>
+            <p className={styles.cardNoteSymbol}>核心符号: {note.key_symbol}</p>
           </motion.div>
         ))}
       </div>

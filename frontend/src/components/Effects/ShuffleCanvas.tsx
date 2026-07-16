@@ -56,7 +56,9 @@ export default function ShuffleCanvas({ onThresholdReached }: Props) {
           opacity: 0.7,
         }}
       >
-        Draw circles with your cursor to shuffle • 5 circles to draw
+        用光标画圈完成洗牌仪式 · 画出5个圆即可抽牌
+        <br/>
+        <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>Draw circles with your cursor · 5 circles to draw</span>
       </div>
     </>
   );

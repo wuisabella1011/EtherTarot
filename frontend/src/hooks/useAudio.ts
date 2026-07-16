@@ -3,7 +3,7 @@ import { Howl } from 'howler';
 
 // Audio sprite layout — all sounds in one file:
 // [0ms-800ms]=draw, [1000ms-1600ms]=flip, [1800ms-3300ms]=reveal, [3500ms-3700ms]=click
-const SFX_SPRITE = {
+const SFX_SPRITE: Record<string, [number, number]> = {
   draw: [0, 800],
   flip: [1000, 600],
   reveal: [1800, 1500],
